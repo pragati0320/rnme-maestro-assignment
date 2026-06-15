@@ -6,7 +6,7 @@ Validate the critical user journeys of the RNME Android application through end-
 
 ## Approach
 
-A risk-based approach was used to prioritize high-impact features. Tests were designed to be independent, maintainable, and include both positive and negative scenarios.
+A risk-based approach was used to prioritize high-impact features. The Tests were designed to be independent, maintainable, and include both positive and negative scenarios.
 
 ## Test Coverage
 
