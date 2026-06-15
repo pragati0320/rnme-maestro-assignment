@@ -99,9 +99,3 @@ maestro test maestro/
 
 ChatGPT was used as an assistant for brainstorming test coverage, reviewing the test strategy, and refining documentation. All test scenarios, implementationwas done using Maestro Studio emulator and also validated manually over physical device.
 ---
-
-## Author
-
-Pragati Sapkota
-
-QA Automation Engineer Assignment Submission
