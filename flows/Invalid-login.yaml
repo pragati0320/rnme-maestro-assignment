@@ -1,0 +1,23 @@
+appId: com.anonymous.rnme
+
+---
+- launchApp
+
+# Enter invalid email
+- tapOn: "Email"
+- inputText: "invalid@rnme.com"
+
+# Enter invalid password
+- tapOn: "••••••••"
+- inputText: "WrongPassword123"
+
+- hideKeyboard
+
+# Attempt login
+- tapOn: "Log in"
+
+# Verify login failed
+- assertVisible: "Log in"
+
+# Capture evidence
+- takeScreenshot: invalid-login

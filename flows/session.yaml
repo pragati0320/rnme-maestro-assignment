@@ -1,0 +1,34 @@
+# Objective: Verify user session persists after app restart.
+
+appId: com.anonymous.rnme
+
+---
+# Launch app
+
+- launchApp
+
+# Verify logged-in session
+
+- assertVisible: "Browse"
+
+# Evidence
+
+- takeScreenshot: session-before-restart
+
+# Close app
+
+- stopApp
+
+# Reopen app
+
+- launchApp
+
+# Verify session persisted
+
+- assertVisible: "Browse"
+
+- assertNotVisible: "Log in"
+
+# Evidence
+
+- takeScreenshot: session-persisted

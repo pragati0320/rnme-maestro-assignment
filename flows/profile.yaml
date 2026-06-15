@@ -1,0 +1,31 @@
+# Objective: Verify user can access profile settings, change theme, and logout.
+
+appId: com.anonymous.rnme
+
+---
+- runFlow: login.yaml
+
+# Open Profile
+- assertVisible: "Profile"
+
+# Validate profile page
+- assertVisible: "Profile"
+
+- assertVisible: "APPEARANCE"
+
+# Change theme
+- tapOn: "Light"
+
+
+# Capture evidence
+- takeScreenshot: theme-changed
+
+# Logout
+- tapOn: "Dark"
+
+# Validate logout
+- tapOn: "Sign out"
+
+- assertVisible: "Log in"
+
+

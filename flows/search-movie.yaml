@@ -1,0 +1,23 @@
+#search functionality 
+appId: com.anonymous.rnme
+
+---
+# Login first
+- runFlow: login.yaml
+
+# Verify Browse screen
+- assertVisible: "Browse"
+
+# Search for a movie
+- tapOn: "Search movies by title"
+- inputText: "Batman"
+
+# Wait for results
+- extendedWaitUntil:
+    visible: "Batman"
+
+# Verify search result appears
+- assertVisible: "Batman"
+
+# Take screenshot for evidence
+- takeScreenshot: search-batman-results

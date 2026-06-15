@@ -1,0 +1,21 @@
+# Objective: Verify application handles searches with no matching results.
+
+appId: com.anonymous.rnme
+
+---
+- runFlow: login.yaml
+
+# Search invalid movie
+
+- tapOn: "Search movies by title"
+- inputText: "xyz123abc999"
+
+# Verify empty state
+
+- assertVisible: "No films match that search"
+
+# Evidence
+
+- takeScreenshot: search-no-results
+
+- tapOn: ""

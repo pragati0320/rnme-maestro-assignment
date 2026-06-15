@@ -1,0 +1,55 @@
+# Objective: Verify user can add and remove a movie from Favorites.
+
+appId: com.anonymous.rnme
+
+---
+- runFlow: login.yaml
+
+# Search movie
+
+- tapOn: "Search movies by title"
+- inputText: "Batman"
+
+# Open movie
+
+- tapOn: "The Batman"
+
+# Add to favorites
+
+- tapOn: "Save"
+
+# Navigate back
+
+- tapOn: "Navigate up"
+
+- tapOn: ""
+
+# Open favorites
+
+- tapOn: "󰋃, Favorites"
+
+# Verify favorite exists
+
+- assertVisible: "The Batman"
+
+# Evidence
+
+- takeScreenshot: favorites-added
+
+# Remove favorite
+
+- tapOn: "The Batman"
+
+- tapOn: "Saved"
+
+- tapOn: "Navigate up"
+
+# Verify removal
+
+- assertNotVisible: "The Batman"
+
+# Screenshot
+
+- takeScreenshot: favorites-removed
+
+- tapOn: ", Browse"

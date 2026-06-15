@@ -1,0 +1,11 @@
+appId: com.anonymous.rnme
+
+---
+- launchApp
+- runFlow: login.yaml
+- tapOn: "Profile"
+
+- tapOn: "Logout"
+
+- assertVisible: "Log in"
+

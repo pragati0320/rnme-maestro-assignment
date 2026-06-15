@@ -1,0 +1,76 @@
+appId: com.anonymous.rnme
+---
+- launchApp
+
+#Navigate to Email Field
+- tapOn: "Email"
+- inputText: "test@rnme.com"
+
+#Navigate to Email Field
+- tapOn: "••••••••"
+- inputText: "Test123$$"
+
+#Click on Login Button
+- tapOn: "Log in"
+
+# Verify Browse screen
+- assertVisible: "Browse"
+
+# Search for a movie
+- tapOn: "Search movies by title"
+- inputText: "Batman"
+
+# Wait for results
+- extendedWaitUntil:
+    visible: "Batman"
+
+# Verify search result appears
+- assertVisible: "Batman"
+
+# Take screenshot for evidence
+- takeScreenshot: search-batman-results
+
+#Movie detail
+- tapOn: "The Batman"
+
+#add favorites
+- tapOn: "Save"
+
+#remove favorites
+- tapOn: "Saved"
+
+#add favorites
+- tapOn: "Save"
+
+#Navigate up
+- tapOn: "Navigate up"
+
+#remove search item
+- tapOn: ""
+
+#favorite screen
+- tapOn: ", Favorites"
+
+#profile screen
+- tapOn: ", Profile"
+
+#Verify profile screen
+- assertVisible: "APPEARANCE"
+
+# Change theme
+- tapOn: "Light"
+
+# Capture evidence
+- takeScreenshot: theme-changed
+
+# Logout
+- tapOn: "Dark"
+
+# Validate logout
+- tapOn: "Sign out"
+
+- assertVisible: "Log in"
+
+
+
+
